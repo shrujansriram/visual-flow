@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #050505;
+  color: #ffffff;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Neon glow effects */
+@layer components {
+  .neon-text {
+    @apply text-neon-blue font-bold tracking-wider;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3);
+  }
+
+  .neon-card {
+    @apply border border-neon-blue/30 rounded-lg backdrop-blur-md;
+    background: rgba(5, 5, 5, 0.5);
+    box-shadow: inset 0 0 20px rgba(0, 243, 255, 0.1);
+  }
+
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:rounded-lg;
+    background: linear-gradient(45deg, #00f3ff, #bc13fe) padding-box;
+    border: 1px solid transparent;
+  }
+}
+
+/* Smooth transitions */
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .glass-effect {
+    background: rgba(5, 5, 5, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+  }
+
+  .glow-effect {
+    @apply shadow-glow;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(5, 5, 5, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.6);
+}
