@@ -33,9 +33,10 @@ export function GraphCanvas({ isLoading = false, children }: GraphCanvasProps) {
       style={{ width: '100%', height: '100%' }}
     >
       {/* Lighting */}
-      <ambientLight intensity={0.5} />
-      <pointLight position={[100, 100, 100]} intensity={1} />
-      <pointLight position={[-100, -100, 100]} intensity={0.5} color="#00f3ff" />
+      <ambientLight intensity={1.5} />
+      <pointLight position={[10, 10, 10]} intensity={2} />
+      <pointLight position={[100, 100, 100]} intensity={1.5} />
+      <pointLight position={[-100, -100, 100]} intensity={1} color="#00f3ff" />
 
       {/* Controls */}
       <OrbitControls

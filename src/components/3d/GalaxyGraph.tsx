@@ -256,14 +256,12 @@ export function GalaxyGraph({
         // Node rendering
         nodeThreeObject={nodeThreeObject}
         nodeVal={(node) => (node.val ? node.val / 2 : 5)}
+        nodeColor={() => '#00f3ff'}
+        nodeOpacity={1}
         // Link styling
         linkWidth={0.5}
-        linkOpacity={0.3}
-        linkColor={(link) => {
-          // Lighter links for important relationships
-          const value = link.value || 10
-          return `rgba(0, 243, 255, ${Math.min(0.6, value / 20)})`
-        }}
+        linkOpacity={0.5}
+        linkColor={() => '#ffffff'}
         // Physics
         cooldownTicks={100}
         d3AlphaDecay={0.03}
@@ -272,7 +270,7 @@ export function GalaxyGraph({
         onNodeHover={handleNodeHover}
         onNodeClick={handleNodeClick}
         // Rendering
-        backgroundColor="transparent"
+        backgroundColor="#000000"
         // Optimization
         enableNodeDrag={true}
         enableNavigationControls={true}

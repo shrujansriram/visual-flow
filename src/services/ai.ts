@@ -204,6 +204,13 @@ const DUMMY_DATA_TEMPLATES: Record<string, () => GraphData> = {
         description: 'Algorithm for computing gradients in neural network training',
       },
       {
+        id: 'gradient-descent',
+        name: 'Gradient Descent',
+        val: 72,
+        category: 'skill',
+        description: 'Optimization algorithm for minimizing loss functions iteratively',
+      },
+      {
         id: 'activation-functions',
         name: 'Activation Functions',
         val: 55,
@@ -808,7 +815,7 @@ const DUMMY_DATA_TEMPLATES: Record<string, () => GraphData> = {
       { source: 'richard-feynman', target: 'quantum-simulation', value: 11, label: 'proposed' },
 
       { source: 'ibm-quantum', target: 'quantum-gates', value: 10, label: 'provides' },
-      { source: 'google-sycamore', target: 'quantum-supremacy', value: 11, label: 'demonstrates' },
+      { source: 'google-sycamore', target: 'quantum-algorithms', value: 11, label: 'demonstrates' },
       { source: 'error-correction', target: 'quantum-gates', value: 10, label: 'protects' },
     ],
   }),
